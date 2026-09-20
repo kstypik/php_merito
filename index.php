@@ -1,9 +1,12 @@
 <?php
 
 require_once "classes/Student.php";
+require_once "classes/Teacher.php";
 
 $student1 = new Student("Jan Nowak", 24, "WSB Merito Poznań");
 $student2 = new Student("Alicja Czerniak", 30, "Politechnika Poznańska");
+
+$teacher = new Teacher("Mirosław", 43, "Język programowania - PHP");
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +21,7 @@ $student2 = new Student("Alicja Czerniak", 30, "Politechnika Poznańska");
 
 <body>
     <h1>Uczniowie</h1>
-    <h2>Informacje o użytkownikach</h2>
+    <h2>Informacje o uczniach</h2>
     <?php
     echo $student1->getInfo() . "<br>";
     echo $student2->getInfo() . "<hr>";
@@ -28,6 +31,17 @@ $student2 = new Student("Alicja Czerniak", 30, "Politechnika Poznańska");
     <?php
     echo $student1->getHtml();
     echo $student2->getHtml();
+    ?>
+
+    <h1>Nauczyciele</h1>
+    <h2>Informacje o nauczycielach</h2>
+    <?php
+    echo $teacher->getInfo();
+    ?>
+
+    <h2>Informacje HTML - HEREDOC</h2>
+    <?php
+    echo $teacher->getHtml();
     ?>
 </body>
 
