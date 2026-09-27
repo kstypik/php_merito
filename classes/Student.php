@@ -12,6 +12,16 @@ class Student extends Person
         $this->school = $school;
     }
 
+    public function getSchool(): string
+    {
+        return $this->school;
+    }
+
+    public function setSchool(string $school): void
+    {
+        $this->school = $school;
+    }
+
     public function getInfo(): string
     {
         return "Imię: {$this->name}, wiek: {$this->age}, szkoła: {$this->school}";
